@@ -78,18 +78,18 @@ class ConfigSection:
 # Models ordered by speed (fastest first for email classification)
 GOOGLE_MODELS = [
     Choice(
-        value="gemini-2.5-flash-lite",
-        label="Gemini 2.5 Flash Lite",
+        value="gemini-3.5-flash-lite",
+        label="Gemini 3.5 Flash Lite",
         description="Fastest, good for simple classification",
     ),
     Choice(
-        value="gemini-2.5-flash",
-        label="Gemini 2.5 Flash",
+        value="gemini-3.8-flash",
+        label="Gemini 3.8 Flash",
         description="Fast and capable (recommended)",
     ),
     Choice(
-        value="gemini-3-pro-preview",
-        label="Gemini 3 Pro",
+        value="gemini-3.1-pro-preview",
+        label="Gemini 3.1 Pro",
         description="Best quality with low reasoning mode",
     ),
 ]
@@ -245,7 +245,7 @@ def build_config_schema(
                     label="Model",
                     field_type=FieldType.SELECT,
                     description="Select the specific model to use",
-                    default="gemini-2.5-flash",  # Fast model by default
+                    default="gemini-3.8-flash",  # Fast model by default
                     # Choices are dynamically set based on provider
                     choices=GOOGLE_MODELS,
                 ),

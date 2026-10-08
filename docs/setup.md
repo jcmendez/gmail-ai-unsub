@@ -251,7 +251,7 @@ cp config.example.toml config.toml
 
 [llm]
 provider = "google"                    # or "anthropic" or "openai"
-model = "gemini-2.5-flash"            # Fast model (recommended)
+model = "gemini-3.8-flash"            # Fast model (recommended)
 api_key = "your-api-key-here"         # Or use api_key_env
 # api_key_env = "GOOGLE_API_KEY"       # Alternative: use env var
 

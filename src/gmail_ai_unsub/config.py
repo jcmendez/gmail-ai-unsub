@@ -80,7 +80,7 @@ class Config:
     @property
     def llm_model(self) -> str:
         """LLM model name."""
-        return self._get("llm", "model", default="gemini-2.5-flash")
+        return self._get("llm", "model", default="gemini-3.8-flash")
 
     @property
     def llm_api_key_env(self) -> str:
@@ -226,7 +226,7 @@ class Config:
 
         Options:
         - 'browser-use': Browser-Use's optimized model (fastest)
-        - 'google': Gemini 2.5 Computer Use (specialized for UI)
+        - 'google': Gemini 3.x (multimodal)
         - 'anthropic': Claude 4.5 (excellent vision)
         - 'openai': GPT-5 (good general purpose)
         - None: Use same provider as classification (llm.provider)
@@ -239,7 +239,7 @@ class Config:
 
         Recommended models:
         - browser-use: (no model needed, uses their optimized model)
-        - google: gemini-2.5-computer-use-preview-10-2025
+        - google: gemini-3.8-flash
         - anthropic: claude-4-5-sonnet
         - openai: gpt-5
 

@@ -319,9 +319,10 @@ We're actively working on improving browser automation to handle these cases. If
 ## Supported LLM Providers
 
 - **Google Gemini**:
-  - `gemini-3-pro-preview` (latest, Nov 2025, use with `thinking_level=high` or `low` based on speed needs)
-  - `gemini-2.5-computer-use` (for browser automation, though gemini-3-pro often better)
-  - Note: Gemini 2.0 models are not recommended
+  - `gemini-3.8-flash` (fast and capable, recommended)
+  - `gemini-3.5-flash-lite` (fastest)
+  - `gemini-3.1-pro-preview` (best quality)
+  - Note: Gemini 2.x models are legacy/limited access and not recommended
 - **Anthropic Claude**:
   - `claude-4-5-sonnet-20250514` (latest Claude 4.5 series)
   - `claude-4-opus-20250514` (most capable)

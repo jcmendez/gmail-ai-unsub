@@ -23,10 +23,10 @@
 provider = "google"
 
 # Model name - fast models recommended for email classification
-# Google:    "gemini-2.5-flash" (recommended), "gemini-2.5-flash-lite" (fastest), "gemini-3-pro-preview" (best quality)
+# Google:    "gemini-3.8-flash" (recommended), "gemini-3.5-flash-lite" (fastest), "gemini-3.1-pro-preview" (best quality)
 # Anthropic: "claude-4-5-haiku" (recommended), "claude-4-5-sonnet" (more capable)
 # OpenAI:    "gpt-5-nano" (fastest), "gpt-5-mini" (recommended), "o4-mini" (reasoning)
-model = "gemini-2.5-flash"
+model = "gemini-3.8-flash"
 
 # API Key - store directly here or use an environment variable
 # Option 1: Store directly in config (keep this file private!)
@@ -120,7 +120,7 @@ enable_mailto = true
 #
 # Provider options:
 #   "browser-use" - Browser-Use's optimized model (fastest, recommended)
-#   "google"      - Gemini 2.5 Computer Use (specialized for UI automation)
+#   "google"      - Gemini 3.x (multimodal)
 #   "anthropic"   - Claude 4.5 (excellent vision capabilities)
 #   "openai"      - GPT-5 (good general purpose)
 #   Leave empty to use the same provider as classification
@@ -133,9 +133,9 @@ enable_mailto = true
 provider = "browser-use"
 # api_key = "your_browser_use_api_key"  # Or set BROWSER_USE_API_KEY env var
 
-# Option 2: Use Gemini Computer Use (specialized for UI)
+# Option 2: Use Gemini 3.x (multimodal)
 # provider = "google"
-# model = "gemini-2.5-computer-use-preview-10-2025"
+# model = "gemini-3.8-flash"
 
 # Option 3: Use Claude 4.5 (excellent vision)
 # provider = "anthropic"

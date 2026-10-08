@@ -2,7 +2,7 @@
 
 Supports multiple LLM providers for browser automation:
 - Browser-Use's optimized model (fastest, recommended)
-- Google Gemini 2.5 Computer Use (specialized for UI automation)
+- Google Gemini 3.x (multimodal)
 - Anthropic Claude 4.5 (excellent vision capabilities)
 - OpenAI GPT-5 (good general purpose)
 
@@ -51,22 +51,8 @@ def create_browser_llm(config: Config) -> Any:
 
         os.environ["GOOGLE_API_KEY"] = api_key
 
-        # Map to appropriate browser automation model
-        # Gemini 2.5 Computer Use is specifically designed for this
-        if "computer-use" in model.lower():
-            browser_model = model  # Use as-is
-        elif "2.5" in model:
-            # Gemini 2.5 models work well for vision tasks
-            browser_model = model
-        elif "flash" in model.lower():
-            # Default to 2.5 flash for speed
-            browser_model = "gemini-2.5-flash-preview-05-20"
-        elif "pro" in model.lower():
-            # Use 2.5 pro for better accuracy
-            browser_model = "gemini-2.5-pro-preview-05-06"
-        else:
-            # For browser automation, prefer the computer use model
-            browser_model = "gemini-2.5-computer-use-preview-10-2025"
+        # Gemini 3.x models are natively multimodal; use the model as-is
+        browser_model = model
 
         return ChatGoogle(model=browser_model)
 

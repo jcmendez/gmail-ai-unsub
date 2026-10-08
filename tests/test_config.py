@@ -14,7 +14,7 @@ token_file = "token.json"
 
 [llm]
 provider = "google"
-model = "gemini-3-pro-preview"
+model = "gemini-3.1-pro-preview"
 api_key_env = "GOOGLE_API_KEY"
 
 [labels]
@@ -28,7 +28,7 @@ failed = "Unsubscribe-Failed"
     config = Config(str(config_file))
 
     assert config.llm_provider == "google"
-    assert config.llm_model == "gemini-3-pro-preview"
+    assert config.llm_model == "gemini-3.1-pro-preview"
     assert config.label_marketing == "Unsubscribe"
 
 

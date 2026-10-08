@@ -60,7 +60,7 @@ token_file = "token.json"              # Path to OAuth token cache
 ```toml
 [llm]
 provider = "google"                    # "google", "anthropic", or "openai"
-model = "gemini-3-pro-preview"         # Model name (see below)
+model = "gemini-3.1-pro-preview"         # Model name (see below)
 
 # API Key - choose one option:
 api_key = "your_api_key_here"          # Option 1: Store directly in config
@@ -96,9 +96,9 @@ The tool checks `api_key` first, then falls back to the environment variable.
 **Provider Options:**
 
 - `google`: Google Gemini models
-  - `gemini-2.5-flash-lite` (fastest, good for simple tasks)
-  - `gemini-2.5-flash` (fast and capable, **recommended**)
-  - `gemini-3-pro-preview` (best quality with `thinking_level=low`, slower)
+  - `gemini-3.5-flash-lite` (fastest, good for simple tasks)
+  - `gemini-3.8-flash` (fast and capable, **recommended**)
+  - `gemini-3.1-pro-preview` (best quality with `thinking_level=low`, slower)
 - `anthropic`: Anthropic Claude models
   - `claude-4-5-haiku` (fast and efficient, **recommended**)
   - `claude-4-5-sonnet` (more capable, slower)
@@ -234,8 +234,8 @@ api_key_env = ""          # Optional: environment variable for browser API key
 - `browser-use`: Browser-Use's optimized model (fastest, recommended)
   - No model name needed
   - Requires `BROWSER_USE_API_KEY` environment variable or `api_key` in config
-- `google`: Gemini 2.5 Computer Use (specialized for UI automation)
-  - Model: `gemini-2.5-computer-use-preview-10-2025`
+- `google`: Gemini 3.x (multimodal, vision-capable)
+  - Model: `gemini-3.8-flash`
 - `anthropic`: Claude 4.5 (excellent vision capabilities)
   - Model: `claude-4-5-sonnet` or `claude-4-5-haiku`
 - `openai`: GPT-5 (good general purpose)
@@ -276,7 +276,7 @@ credentials_file = "credentials.json"
 
 [llm]
 provider = "google"
-model = "gemini-3-pro-preview"
+model = "gemini-3.1-pro-preview"
 api_key_env = "GOOGLE_API_KEY"
 ```
 
@@ -289,7 +289,7 @@ token_file = "token.json"
 
 [llm]
 provider = "google"
-model = "gemini-3-pro-preview"
+model = "gemini-3.1-pro-preview"
 api_key_env = "GOOGLE_API_KEY"
 temperature = 0.1           # Lower for consistent classification
 thinking_level = "high"     # Deep reasoning for better accuracy
@@ -351,7 +351,7 @@ For **faster processing** (high volume):
 ```toml
 [llm]
 provider = "google"
-model = "gemini-3-pro-preview"
+model = "gemini-3.1-pro-preview"
 thinking_level = "low"   # Faster, less reasoning overhead
 temperature = 0.0        # Most deterministic
 ```
@@ -360,7 +360,7 @@ For **best accuracy** (important emails):
 ```toml
 [llm]
 provider = "google"
-model = "gemini-3-pro-preview"
+model = "gemini-3.1-pro-preview"
 thinking_level = "high"  # Deep reasoning
 temperature = 0.1        # Slightly creative but consistent
 ```
